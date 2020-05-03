@@ -1,6 +1,6 @@
 # Simple Weather App
 
-Simple Weather Application created using Weather API from [OpenWeather]('https://openweathermap.org/)
+Simple Weather Application created using Weather API from [OpenWeather](https://openweathermap.org/)
 
 ## Technologies:
 
@@ -22,4 +22,4 @@ To run this project, install it locally using npm:
 
 # Demo
 
-Try this working demo: [WeatherApp]('https://rso21.github.io/WeatherApp/')
+Try this working demo: [WeatherApp](https://rso21.github.io/WeatherApp/)

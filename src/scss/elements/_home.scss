@@ -1,3 +1,124 @@
+.home-mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    font-family: $font-base;
+
+    .background-mobile{
+        position: absolute;
+        z-index: 0;
+    }
+
+    img{
+        width: 100vw;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0;
+        margin: 0;
+    }
+
+    .home-form-mobile{
+        content: "";
+        z-index: 1;
+        text-transform: uppercase;
+
+        label{
+            font-size: 1em;
+            font-weight: 800;   
+
+            input[type='text']{
+                background-color: $background-color;
+                text-align: center;
+                border: 0.1em solid $color-primary;
+                padding: 0.4em;
+                margin-top: 1em;
+                box-shadow: 0.3em 0.3em 1em black;
+            }
+        }
+    }
+
+    .weather-btn-mobile{
+        content: "";
+        z-index: 1;
+        font-weight: 800; 
+        margin-top: 2em;
+        background-color: white;
+        border: 0.2em solid $color-primary;
+        padding: 0.3em 1em;
+        box-shadow: 0.3em 0.3em 1em black;
+
+        &:hover{
+            color: $color-secondary;
+            border: 0.2em solid $color-secondary;
+            box-shadow: 0.3em 0.3em 1em $color-secondary;
+        }
+    }
+
+    .home-weather-mobile{
+        content: "";
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+       
+
+        .home-weathe-city-mobile{
+            font-size: 2.2em;
+            padding: 0.7em 0;
+            text-transform: uppercase;
+        }
+
+        .temp-and-pressure-mobile,
+        .himidity-and-wind-mobile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .temp-mobile{
+                display: flex;
+                flex-direction: row;
+
+
+                span{
+                    padding: 1em 0.4em 0 0;
+                }
+            }
+
+            .home-weather-icon-mobile{
+                width: 8vw;
+                height: 4vh;
+            }
+            
+            .home-weather-box-mobile{
+                width: 50vw;
+                height: 13vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                font-size: 1em;
+                margin: 0.5em;
+                border: 0.1em solid $color-primary;
+                background-color: $background-color;
+                box-shadow: 0.3em 0.3em 1em black;
+
+                p{
+                    padding-bottom: 0.2em;
+                    font-weight: 600;  
+                }
+                .home-weather-box-temp{
+                    padding-top: 1em;
+                }
+            }
+        }
+    }
+}
+
 .home{
     display: flex;
     justify-content: center;
@@ -36,6 +157,7 @@
                 border: 0.1em solid $color-primary;
                 padding: 0.5em;
                 margin-top: 1em;
+                box-shadow: 0.3em 0.3em 1em black;
             }
         }
     }
@@ -46,12 +168,14 @@
         font-weight: 800; 
         margin-top: 3em;
         background-color: white;
-        border: 0.1em solid $color-primary;
+        border: 0.2em solid $color-primary;
         padding: 0.5em 2em;
+        box-shadow: 0.3em 0.3em 1em black;
 
         &:hover{
             color: $color-secondary;
-            border: 0.1em solid $color-secondary;
+            border: 0.2em solid $color-secondary;
+            box-shadow: 0.3em 0.3em 1em $color-secondary;
         }
     }
 
@@ -60,7 +184,6 @@
         z-index: 1;
         display: flex;
         justify-content: center;
-        align-items: center;
         flex-direction: column;
        
 
@@ -99,10 +222,10 @@
                 align-items: center;
                 flex-direction: column;
                 font-size: 1.4em;
-                vertical-align: middle;
                 margin: 0.5em;
                 border: 0.1em solid $color-primary;
                 background-color: $background-color;
+                box-shadow: 0.3em 0.3em 1em black;
 
                 p{
                     padding-bottom: 0.3em;

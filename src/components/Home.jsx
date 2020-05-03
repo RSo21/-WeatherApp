@@ -44,6 +44,13 @@ class Home extends Component {
         this.setState({ width: window.innerWidth });
     };
 
+    backToWeather = () => {
+        this.setState({ 
+            open: false,
+            city: ''
+        });
+    };
+
     handleChange = (e) => {
         this.setState({
             city: e.target.value,
@@ -61,8 +68,46 @@ class Home extends Component {
         if(isMobile){
             return(
                 <div className="home-mobile">
-                {city} {temperature} &#8451;
-                <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt = "weather-icon"/> 
+                    <img className="background-mobile" src = {Background} alt = "background" />
+                {open ?  <div className = "home-weather-mobile">
+                            <p className="home-weathe-city-mobile">{city}</p>                           
+                            <div className="temp-and-pressure-mobile">
+                                <div className="home-weather-box-mobile">
+                                    <p className="home-weather-box-temp-mobile">TEPMERATURE</p>
+                                    <div className="temp">
+                                        <span>{temperature}&#8451;</span>
+                                        <img className = "home-weather-icon-mobile" src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt = "weather-icon"/>
+                                    </div>
+                                </div>
+                                <div className = "home-weather-box-mobile">
+                                    <p>PRESSURE</p>
+                                    {pressure} hPa
+                                </div>
+                            </div>
+                            <div className = "himidity-and-wind-mobile">
+                                <div className = "home-weather-box-mobile">
+                                    <p>HUMIDITY</p>
+                                    {humidity} %
+                                </div>
+                                <div className = "home-weather-box-mobile">
+                                    <p>WIND</p> 
+                                    {wind} km/h
+                                </div>
+                            </div>
+                            <button className = "weather-btn-mobile" onClick = {this.backToWeather}>TRY AGAIN</button>
+                        </div>
+                        :  
+                  <>      
+                    <form className = "home-form-mobile"  onSubmit={this.handleSubmit} >
+                        <label>        
+                            enter the city name: 
+                            <br/>
+                            <input type="text" value = {city} name = "text"
+                            onChange={this.handleChange} />
+                        </label>
+                    </form>
+                    <button className = "weather-btn-mobile" onClick = {this.showWeather}>SHOW</button>
+                    </>}
               </div>
             )
         }else{
@@ -85,7 +130,7 @@ class Home extends Component {
                                 <div className="home-weather-box">
                                     <p className="home-weather-box-temp">TEPMERATURE</p>
                                     <div className="temp">
-                                        <span>{temperature} &#8451;</span>
+                                        <span>{temperature}&#8451;</span>
                                         <img className = "home-weather-icon" src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt = "weather-icon"/>
                                     </div>
                                 </div>

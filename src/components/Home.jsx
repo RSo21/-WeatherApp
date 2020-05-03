@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Background from '../assets/fabio-sasso-XjIajC-SYuc-unsplash.jpg';
 
 class Home extends Component {
     state = {
@@ -67,6 +68,7 @@ class Home extends Component {
         }else{
             return(
                 <div className="home">
+                    <img className="background" src = {Background} alt = "background" />
                     <form className = "home-form"  onSubmit={this.handleSubmit} >
                         <label>        
                             enter the city name: 
@@ -78,26 +80,28 @@ class Home extends Component {
                     <button className = "weather-btn" onClick = {this.showWeather}>SHOW</button>
                     {open ? 
                         <div className = "home-weather">
-                            <p>{city}</p>
+                            <p className="home-weathe-city">{city}</p>                           
                             <div className="temp-and-pressure">
-                                <div>
-                                    <p>TEPMERATURE</p>
-                                    {temperature} &#8451;
-                                    <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt = "weather-icon"/>
+                                <div className="home-weather-box">
+                                    <p className="home-weather-box-temp">TEPMERATURE</p>
+                                    <div className="temp">
+                                        <span>{temperature} &#8451;</span>
+                                        <img className = "home-weather-icon" src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt = "weather-icon"/>
+                                    </div>
                                 </div>
-                                <div>
+                                <div className = "home-weather-box">
                                     <p>PRESSURE</p>
-                                    {pressure}hPa
+                                    {pressure} hPa
                                 </div>
                             </div>
                             <div className = "himidity-and-wind">
-                                <div>
+                                <div className = "home-weather-box">
                                     <p>HUMIDITY</p>
                                     {humidity} %
                                 </div>
-                                <div>
-                                    <p>WIND</p>
-                                    {wind}
+                                <div className = "home-weather-box">
+                                    <p>WIND</p> 
+                                    {wind} km/h
                                 </div>
                             </div>
                         </div> 

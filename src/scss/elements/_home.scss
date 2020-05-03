@@ -5,26 +5,24 @@
     flex-direction: column;
     height: 100vh;
     width: 100%;
-    position: relative;
-    z-index: 1;
     font-family: $font-base;
 
-    &::before{
-        background-image: url(./../../assets/fabio-sasso-XjIajC-SYuc-unsplash.jpg);
+    .background{
+        position: absolute;
+        z-index: 0;
+    }
+
+    img{
+        width: 100vw;
+        height: 100vh;
         background-repeat: no-repeat;
         background-size: cover;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom:0;
-        left: 0;
-        content: "";
-        z-index: 0;
-        display: block
+        padding: 0;
+        margin: 0;
     }
 
     .home-form{
-        position: absolute;
+        content: "";
         z-index: 1;
         text-transform: uppercase;
 
@@ -33,7 +31,7 @@
             font-weight: 800;   
 
             input[type='text']{
-                background: transparent;
+                background-color: $background-color;
                 text-align: center;
                 border: 0.1em solid $color-primary;
                 padding: 0.5em;
@@ -43,11 +41,11 @@
     }
 
     .weather-btn{
-        position: absolute;
-        z-index: 2;
+        content: "";
+        z-index: 1;
         font-weight: 800; 
-        margin-top: 7em;
-        background: transparent;
+        margin-top: 3em;
+        background-color: white;
         border: 0.1em solid $color-primary;
         padding: 0.5em 2em;
 
@@ -58,7 +56,62 @@
     }
 
     .home-weather{
-        position: absolute;
+        content: "";
         z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+       
+
+        .home-weathe-city{
+            font-size: 3em;
+            padding: 1em 0;
+            text-transform: uppercase;
+        }
+
+        .temp-and-pressure,
+        .himidity-and-wind{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .temp{
+                display: flex;
+                flex-direction: row;
+
+
+                span{
+                    padding: 1em 0.4em 0 0;
+                }
+            }
+
+            .home-weather-icon{
+                width: 4vw;
+                height: 8vh;
+            }
+            
+            .home-weather-box{
+                width: 20vw;
+                height: 20vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                font-size: 1.4em;
+                vertical-align: middle;
+                margin: 0.5em;
+                border: 0.1em solid $color-primary;
+                background-color: $background-color;
+
+                p{
+                    padding-bottom: 0.3em;
+                    font-weight: 600;  
+                }
+                .home-weather-box-temp{
+                    padding-top: 1.8em;
+                }
+            }
+        }
     }
 }

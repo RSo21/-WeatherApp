@@ -1,0 +1,64 @@
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    font-family: $font-base;
+
+    &::before{
+        background-image: url(./../../assets/fabio-sasso-XjIajC-SYuc-unsplash.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom:0;
+        left: 0;
+        content: "";
+        z-index: 0;
+        display: block
+    }
+
+    .home-form{
+        position: absolute;
+        z-index: 1;
+        text-transform: uppercase;
+
+        label{
+            font-size: 1.8em;
+            font-weight: 800;   
+
+            input[type='text']{
+                background: transparent;
+                text-align: center;
+                border: 0.1em solid $color-primary;
+                padding: 0.5em;
+                margin-top: 1em;
+            }
+        }
+    }
+
+    .weather-btn{
+        position: absolute;
+        z-index: 2;
+        font-weight: 800; 
+        margin-top: 7em;
+        background: transparent;
+        border: 0.1em solid $color-primary;
+        padding: 0.5em 2em;
+
+        &:hover{
+            color: $color-secondary;
+            border: 0.1em solid $color-secondary;
+        }
+    }
+
+    .home-weather{
+        position: absolute;
+        z-index: 1;
+    }
+}

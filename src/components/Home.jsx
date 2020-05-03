@@ -16,7 +16,7 @@ class Home extends Component {
     showWeather = () => {
         const {city} = this.state
 
-        const API_URL = 'http://api.openweathermap.org/data/2.5/weather';
+        const API_URL = 'https://api.openweathermap.org/data/2.5/weather';
         const UNITS = 'metric'
         const APP_ID = 'b945797c58d365f04b977e8b2475fe8a'
         const URL = `${API_URL}?q=${city}&units=${UNITS}&appid=${APP_ID}`;

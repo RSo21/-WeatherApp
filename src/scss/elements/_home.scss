@@ -184,6 +184,7 @@
         z-index: 1;
         display: flex;
         justify-content: center;
+        align-items: center;
         flex-direction: column;
        
 
@@ -210,7 +211,7 @@
             }
 
             .home-weather-icon{
-                width: 4vw;
+                width: 5vw;
                 height: 8vh;
             }
             
@@ -234,6 +235,21 @@
                 .home-weather-box-temp{
                     padding-top: 1.8em;
                 }
+            }
+        }
+        .weather-btn-try-again{
+            width: 20vw;
+            font-weight: 800; 
+            margin-top: 3em;
+            background-color: white;
+            border: 0.2em solid $color-primary;
+            padding: 0.5em 2em;
+            box-shadow: 0.3em 0.3em 1em black;
+    
+            &:hover{
+                color: $color-secondary;
+                border: 0.2em solid $color-secondary;
+                box-shadow: 0.3em 0.3em 1em $color-secondary;
             }
         }
     }

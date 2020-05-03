@@ -114,43 +114,46 @@ class Home extends Component {
             return(
                 <div className="home">
                     <img className="background" src = {Background} alt = "background" />
-                    <form className = "home-form"  onSubmit={this.handleSubmit} >
-                        <label>        
-                            enter the city name: 
-                            <br/>
-                            <input type="text" value = {city} name = "text"
-                            onChange={this.handleChange} />
-                        </label>
-                    </form>
-                    <button className = "weather-btn" onClick = {this.showWeather}>SHOW</button>
-                    {open ? 
-                        <div className = "home-weather">
-                            <p className="home-weathe-city">{city}</p>                           
-                            <div className="temp-and-pressure">
-                                <div className="home-weather-box">
-                                    <p className="home-weather-box-temp">TEPMERATURE</p>
-                                    <div className="temp">
-                                        <span>{temperature}&#8451;</span>
-                                        <img className = "home-weather-icon" src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt = "weather-icon"/>
-                                    </div>
-                                </div>
-                                <div className = "home-weather-box">
-                                    <p>PRESSURE</p>
-                                    {pressure} hPa
+                    {open ?
+                    <div className = "home-weather">
+                        <p className="home-weathe-city">{city}</p>                           
+                        <div className="temp-and-pressure">
+                            <div className="home-weather-box">
+                                <p className="home-weather-box-temp">TEPMERATURE</p>
+                                <div className="temp">
+                                    <span>{temperature}&#8451;</span>
+                                    <img className = "home-weather-icon" src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt = "weather-icon"/>
                                 </div>
                             </div>
-                            <div className = "himidity-and-wind">
-                                <div className = "home-weather-box">
-                                    <p>HUMIDITY</p>
-                                    {humidity} %
-                                </div>
-                                <div className = "home-weather-box">
-                                    <p>WIND</p> 
-                                    {wind} km/h
-                                </div>
+                            <div className = "home-weather-box">
+                                <p>PRESSURE</p>
+                                {pressure} hPa
                             </div>
-                        </div> 
-                    : ""}
+                        </div>
+                        <div className = "himidity-and-wind">
+                            <div className = "home-weather-box">
+                                <p>HUMIDITY</p>
+                                {humidity} %
+                            </div>
+                            <div className = "home-weather-box">
+                                <p>WIND</p> 
+                                {wind} km/h
+                            </div>
+                        </div>
+                        <button className = "weather-btn-try-again" onClick = {this.backToWeather}>TRY AGAIN</button>
+                    </div>
+                    :
+                    <>
+                        <form className = "home-form"  onSubmit={this.handleSubmit} >
+                            <label>        
+                                enter the city name: 
+                                <br/>
+                                <input type="text" value = {city} name = "text"
+                                onChange={this.handleChange} />
+                            </label>
+                        </form>
+                        <button className = "weather-btn" onClick = {this.showWeather}>SHOW</button>
+                    </>}
               </div>
             )
         }

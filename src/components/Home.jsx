@@ -119,7 +119,7 @@ class Home extends Component {
                         <p className="home-weathe-city">{city}</p>                           
                         <div className="temp-and-pressure">
                             <div className="home-weather-box">
-                                <p className="home-weather-box-temp">TEPMERATURE</p>
+                                <p className="home-weather-box-temp">TEMPERATURE</p>
                                 <div className="temp">
                                     <span>{temperature}&#8451;</span>
                                     <img className = "home-weather-icon" src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt = "weather-icon"/>

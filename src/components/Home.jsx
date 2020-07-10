@@ -73,7 +73,7 @@ class Home extends Component {
                             <p className="home-weathe-city-mobile">{city}</p>                           
                             <div className="temp-and-pressure-mobile">
                                 <div className="home-weather-box-mobile">
-                                    <p className="home-weather-box-temp-mobile">TEPMERATURE</p>
+                                    <p className="home-weather-box-temp-mobile">TEMPERATURE</p>
                                     <div className="temp">
                                         <span>{temperature}&#8451;</span>
                                         <img className = "home-weather-icon-mobile" src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt = "weather-icon"/>

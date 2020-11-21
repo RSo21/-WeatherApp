@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d375940a16d8c8faf916bf9157725b88",
+    "revision": "fcd1e5c90d0daa81d9fb6c7c93877163",
     "url": "/WeatherApp/index.html"
   },
   {
-    "revision": "b200cef704fc205b8e28",
+    "revision": "d9ebb86f6ff0e0b33d1a",
     "url": "/WeatherApp/static/css/main.3a15619b.chunk.css"
   },
   {
@@ -16,15 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/WeatherApp/static/js/2.ba4828c6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b200cef704fc205b8e28",
-    "url": "/WeatherApp/static/js/main.71a9908b.chunk.js"
+    "revision": "d9ebb86f6ff0e0b33d1a",
+    "url": "/WeatherApp/static/js/main.18b89edd.chunk.js"
   },
   {
     "revision": "a1be24b28b4289363924",
     "url": "/WeatherApp/static/js/runtime-main.07d82fdf.js"
   },
   {
-    "revision": "432929e8185722e0076cae3fb2f8624f",
-    "url": "/WeatherApp/static/media/fabio-sasso-XjIajC-SYuc-unsplash.432929e8.jpg"
+    "revision": "ec9fd7f17d01efd7db98f32c0249f3dc",
+    "url": "/WeatherApp/static/media/fabio-sasso-XjIajC-SYuc-unsplash.ec9fd7f1.jpg"
   }
 ]);
